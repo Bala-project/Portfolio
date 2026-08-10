@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balamurugan A — Software Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Balamurugan A, an Electronics and Communication Engineering graduate and aspiring software developer skilled in Java, HTML, CSS, JavaScript and MySQL.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Signal trace -->
+  <div class="signal-trace" aria-hidden="true">
+    <svg width="2" height="100%" viewBox="0 0 2 100" preserveAspectRatio="none">
+      <line x1="1" y1="0" x2="1" y2="100" class="trace-track"/>
+      <line x1="1" y1="0" x2="1" y2="0" class="trace-fill" id="traceFill"/>
+    </svg>
+  </div>
+
+  <!-- ===== Navigation ===== -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary">
+      <a href="#home" class="logo">BMD<span </span></a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
+        <li><a href="#resume" class="nav-link" data-section="resume">Resume</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ===== Hero ===== -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        
+        <div class="hero-text reveal">
+          <p>Hi there, I'm</p>
+          <h1 class="hero-name">Balamurugan A</h1>
+          <p class="hero-role">Software Developer <span class="role-divider">/</span> <span class="role-typing"></span></p>
+          <p class="hero-intro">
+            Electronics and Communication Engineering graduate with hands-on experience building
+            responsive web applications and Java-based systems. I enjoy turning real-world problems
+            into clean, working software — and I'm looking for an entry-level development role where
+            I can keep learning and contribute from day one.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            <a href="#resume" class="btn btn-secondary" id="resumeBtn">
+              <i class="fa-solid fa-file-pdf"></i> Resume
+            </a>
+          </div>
+          <div class="hero-links">
+            <a href="https://github.com/Bala-project" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+              <i class="fa-brands fa-github"></i> github.com/Bala-project
+            </a>
+            <a href="https://linkedin.com/in/bala2006" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+              <i class="fa-brands fa-linkedin"></i> linkedin.com/in/bala2006
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <!-- Profile Photo with Java Icon Badge - Portrait Grid -->
+          <div class="profile-photo-container">
+            <div class="profile-photo">
+              <img 
+                src="profile.jpg" 
+                alt="Balamurugan A - Software Developer" 
+                class="profile-img"
+                loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.querySelector('.profile-placeholder').style.display='flex'"
+              >
+              <div class="profile-placeholder" style="display:none;">
+                <i class="fa-solid fa-user"></i>
+                <span>BA</span>
+              </div>
+              <div class="photo-ring"></div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        
+        <h2 class="section-title reveal">ABOUT ME</h2>
+       <p class="hero-title">
+  Balamurugan A - <span class="section-label">B.E ECE Student & Aspiring Software Engineer</span>
+</p>
+         
+        <div class="about-grid reveal">
+          <p class="about-text">
+            I'm an Electronics and Communication Engineering student in Coimbatore with a CGPA of 8.5,
+            currently transitioning my analytical, systems-first thinking into software development.
+            My work spans Java-based backend logic with MySQL, and responsive front-end interfaces built
+            with HTML, CSS and JavaScript. I've strengthened my problem-solving through Data Structures
+            and Algorithms practice, and I'm comfortable across the OOP and DBMS fundamentals that
+            underpin real applications.
+          </p>
+          <div class="about-facts">
+            <div class="fact">
+              <span class="fact-value">100+</span>
+              <span class="fact-label">Solved problems in HackerRank</span>
+            </div>
+            <div class="fact">
+              <span class="fact-value">8.5</span>
+              <span class="fact-label">CGPA in UG</span>
+            </div>
+            <div class="fact">
+              <span class="fact-value">5+</span>
+              <span class="fact-label"> Years of Coding journey</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Education ===== -->
+    <section id="education" class="section alt">
+      <div class="container">
+        
+        <h2 class="section-title reveal">Education</h2>
+
+        <div class="edu-list">
+          <div class="edu-card reveal">
+            <div class="edu-marker"></div>
+            <div class="edu-body">
+              <div class="edu-top">
+                <h3>B.E. Electronics and Communication Engineering</h3>
+                <span class="edu-date">Sep 2023 – Present</span>
+              </div>
+              <p class="edu-school">Nehru Institute of Engineering and Technology, Coimbatore</p>
+              <p class="edu-detail">CGPA: 8.4</p>
+            </div>
+          </div>
+
+          <div class="edu-card reveal">
+            <div class="edu-marker"></div>
+            <div class="edu-body">
+              <div class="edu-top">
+                <h3>Higher Secondary Certificate (HSC)</h3>
+                <span class="edu-date">June 2022 – Apr 2023</span>
+              </div>
+              <p class="edu-school">Sri Vidya Mandir Sr Sec School, Salem</p>
+              <p class="edu-detail">Score: 80%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section id="skills" class="section">
+      <div class="container">
+       
+        <h2 class="section-title reveal">Technical Skills</h2>
+
+        <div class="skills-grid">
+          <div class="skill-category reveal">
+            <h3><i class="fa-solid fa-terminal"></i> Programming Languages</h3>
+            <div class="badge-list">
+              <span class="badge"><i class="fa-brands fa-java" style="background: linear-gradient(135deg, #f89820, #0066cc); -webkit-background-clip: text; background-clip: text; color: transparent;"></i> Java</span>
+              <span class="badge"><i class="fa-brands fa-html5" style="color: #e34f26;"></i> HTML</span>
+              <span class="badge"><i class="fa-brands fa-css3-alt" style="color: #264de4;"></i> CSS</span>
+              <span class="badge"><i class="fa-brands fa-js" style="color: #f7df1e;"></i> JavaScript</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal">
+            <h3><i class="fa-solid fa-database"></i> Databases</h3>
+            <div class="badge-list">
+              <span class="badge mysql-badge">
+                <span class="mysql-dolphin-small">🐬</span>
+               
+                MySQL
+              </span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal">
+            <h3><i class="fa-solid fa-toolbox"></i> Tools &amp; Platforms</h3>
+            <div class="badge-list">
+              <span class="badge"><i class="fa-brands fa-github" style="color: #ffffff;"></i> GitHub</span>
+              <span class="badge"><i class="fa-solid fa-code" style="color: #007acc;"></i> VS Code</span>
+              <span class="badge"><i class="fa-solid fa-code" style="color: #2c2255;"></i> Eclipse IDE</span>
+              <span class="badge"><i class="fa-solid fa-file" style="color: #d83b01;"></i> Microsoft Office</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal">
+            <h3><i class="fa-solid fa-diagram-project"></i> Core Concepts</h3>
+            <div class="badge-list">
+              <span class="badge">Data Structures &amp; Algorithms</span>
+              <span class="badge">OOPS</span>
+              <span class="badge">DBMS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section id="experience" class="section alt">
+      <div class="container">
+       
+        <h2 class="section-title reveal">Experience &amp; Internship</h2>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3>Software Engineer Intern</h3>
+                <span class="timeline-date">May 2026 – June 2026</span>
+              </div>
+              <p class="timeline-company"><i class="fa-solid fa-building"></i> HackerRank (Virtual)</p>
+              <ul class="timeline-list">
+                <li>Developed optimized Java solutions for coding challenges involving Data Structures and Algorithms.</li>
+                <li>Implemented efficient algorithms and test case management, strengthening analytical and software engineering skills.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects" class="section">
+      <div class="container">
+       
+        <h2 class="section-title reveal">Featured Projects</h2>
+
+        <div class="project-grid">
+
+          <!-- Project 1 -->
+          <article class="project-card reveal">
+            <div class="project-thumbnail">
+              <img 
+                src="project-thumbnails/project1.jpg" 
+                alt="Men's Fashion E-commerce Website" 
+                class="project-image"
+                loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.querySelector('.project-thumbnail-placeholder').style.display='flex'"
+              >
+              <div class="project-thumbnail-placeholder" style="display:none;">
+                <i class="fa-solid fa-shirt"></i>
+                <span>E-commerce</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-top">
+                <h3>Men's Fashion — E-commerce Website</h3>
+                <div class="project-links">
+                  <a href="https://github.com/Bala-project/Mens-fashion--ecommerce" class="icon-link" target="_blank" rel="noopener noreferrer" title="View on GitHub"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+                  <a href="https://bala-project.github.io/Mens-fashion--ecommerce/" class="icon-link" target="_blank" rel="noopener noreferrer" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #2fd8c4;"></i></a>
+                  
+                </div>
+              </div>
+              <span class="project-date">June 2026 – July 2026</span>
+              <p class="project-desc">
+                An e-commerce website with structured pages for services, pricing, and contact
+                information, built around a clean, simple UI focused on easy navigation and a
+                better user experience.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-badge"><i class="fa-brands fa-html5" style="color: #e34f26;"></i> HTML</span>
+                <span class="tech-badge"><i class="fa-brands fa-css3-alt" style="color: #264de4;"></i> CSS</span>
+                <span class="tech-badge"><i class="fa-brands fa-js" style="color: #f7df1e;"></i> JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal">
+            <div class="project-thumbnail">
+              <img 
+                src="project-thumbnails/project2.jpg" 
+                alt="Hospital Management System" 
+                class="project-image"
+                loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.querySelector('.project-thumbnail-placeholder').style.display='flex'"
+              >
+              <div class="project-thumbnail-placeholder" style="display:none;">
+                <i class="fa-solid fa-hospital"></i>
+                <span>Hospital Mgmt</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-top">
+                <h3>Hospital Management System</h3>
+                <div class="project-links">
+                  <a href="https://github.com/Bala-project/HospitalManagement" class="icon-link" target="_blank" rel="noopener noreferrer" title="View on GitHub"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+                  <a href="https://bala-project.github.io/HospitalManagement/" class="icon-link" target="_blank" rel="noopener noreferrer" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #2fd8c4;"></i></a>
+                  
+                </div>
+              </div>
+              <span class="project-date">Dec 2025 – Jan 2026</span>
+              <p class="project-desc">
+                A hospital management system covering patient registration, doctor management,
+                appointment scheduling, and database-driven records — with Java integrated to
+                MySQL via JDBC for secure, efficient CRUD operations.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-badge"><i class="fa-brands fa-java" style="background: linear-gradient(135deg, #f89820, #0066cc); -webkit-background-clip: text; background-clip: text; color: transparent;"></i> Java</span>
+                <span class="tech-badge mysql-tech-badge">
+                
+                  <span class="mysql-dolphin-small">🐬</span>
+                  MySQL
+                </span>
+                <span class="tech-badge"><i class="fa-solid fa-plug" style="color: #007396;"></i> JDBC</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Certifications & Achievements ===== -->
+    <section id="certifications" class="section alt">
+      <div class="container">
+      
+        <h2 class="section-title reveal">Certifications &amp; Achievements</h2>
+
+        <div class="cert-columns">
+          <div class="cert-block reveal">
+            <h3><i class="fa-solid fa-certificate"></i> Certifications</h3>
+            <ul class="cert-list">
+              <li>
+                <span class="cert-name">Object Oriented Programming in Java</span>
+                <span class="cert-meta">IBM · 2025</span>
+              </li>
+              <li>
+                <span class="cert-name">Full Stack Development Course</span>
+                <span class="cert-meta">Novitech R&amp;D Private Limited · 2026</span>
+              </li>
+              <li>
+                <span class="cert-name">SQL Certification Course</span>
+                <span class="cert-meta">Intellipaat · 2026</span>
+              </li>
+              <li>
+                <span class="cert-name">Communication Skills</span>
+                <span class="cert-meta">TCSiON · 2024</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="cert-block reveal">
+            <h3><i class="fa-solid fa-trophy"></i> Achievements</h3>
+            <ul class="cert-list">
+              <li>
+                <span class="cert-name">10-Hour Hackathon Participant</span>
+                <span class="cert-meta">Amypo Organization · 2025</span>
+              </li>
+              <li>
+                <span class="cert-name">Ignite Bootcamp — Venture Idea Development</span>
+                <span class="cert-meta">2026</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Resume Section ===== -->
+    <section id="resume" class="section">
+      <div class="container">
+        
+        <h2 class="section-title reveal">My Resume</h2>
+        
+        <div class="resume-container reveal">
+          <div class="resume-preview">
+            <div class="resume-icon">
+              <i class="fa-solid fa-file-pdf"></i>
+            </div>
+            <div class="resume-info">
+              <h3>Balamurugan A - Resume</h3>
+              <p>Software Developer | Java & Web Developer</p>
+              <div class="resume-actions">
+                <a href="#" class="btn btn-primary" id="downloadResume">
+                  <i class="fa-solid fa-download"></i> Download PDF
+                </a>
+                <a href="#" class="btn btn-secondary" id="viewResume">
+                  <i class="fa-solid fa-eye"></i> View Online
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="resume-skills-summary">
+            <h4>Quick Overview</h4>
+            <div class="resume-tags">
+              <span class="badge"><i class="fa-brands fa-java" style="background: linear-gradient(135deg, #f89820, #0066cc); -webkit-background-clip: text; background-clip: text; color: transparent;"></i> Java</span>
+              <span class="badge"><i class="fa-brands fa-html5" style="color: #e34f26;"></i> HTML/CSS</span>
+              <span class="badge"><i class="fa-brands fa-js" style="color: #f7df1e;"></i> JavaScript</span>
+              <span class="badge mysql-badge">
+    
+                <span class="mysql-dolphin-small">🐬</span>
+                MySQL
+              </span>
+              <span class="badge"><i class="fa-brands fa-github" style="color: #ffffff;"></i> Git/GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        
+        <h2 class="section-title reveal">Let's Work Together</h2>
+        <p class="contact-intro reveal">
+          Open to entry-level software, Java, and web developer roles. Reach out directly or use the form below.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <a href="mailto:a.balamurugan282006@gmail.com" class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>a.balamurugan282006@gmail.com</span>
+            </a>
+            <a href="tel:+919043662816" class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 9043662816</span>
+            </a>
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Salem, Tamil Nadu, India</span>
+            </div>
+            <a href="https://linkedin.com/in/bala2006" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <i class="fa-brands fa-linkedin"></i>
+              <span>linkedin.com/in/bala2006</span>
+            </a>
+            <a href="https://github.com/Bala-project" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <i class="fa-brands fa-github"></i>
+              <span>github.com/Bala-project</span>
+            </a>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required>
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+              <span class="form-error" id="emailError"></span>
+            </div>
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+              <span class="form-error" id="subjectError"></span>
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>&copy; <span id="year"></span> Balamurugan A. Built with HTML, CSS &amp; JavaScript.</p>
+      <div class="footer-links">
+        <a href="https://github.com/Bala-project" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+        <a href="https://linkedin.com/in/bala2006" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i></a>
+        <a href="mailto:a.balamurugan282006@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope" style="color: #ea4335;"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
