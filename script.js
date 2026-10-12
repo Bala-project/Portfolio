@@ -465,7 +465,7 @@ function initResumeButtons() {
   if (downloadBtn) {
     downloadBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      const resumeUrl = 'Balamurugan A_resume.pdf';
+      const resumeUrl = 'Balamurugan A_Resume.pdf';
       const link = document.createElement('a');
       link.href = resumeUrl;
       link.download = 'Balamurugan_A_Resume.pdf';
@@ -483,7 +483,7 @@ function initResumeButtons() {
   if (viewBtn) {
     viewBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      const resumeUrl = 'Balamurugan A_resume.pdf';
+      const resumeUrl = 'Balamurugan A_Resume.pdf';
       window.open(resumeUrl, '_blank');
     });
   }
